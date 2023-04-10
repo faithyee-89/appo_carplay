@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Carplay_app" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--设置系统的取消预览(空白窗口)为true -->
+        <item name="android:windowDisablePreview">true</item>
+        <!--设置背景为透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
+    </style>
+
+    <style name="Theme.Appiot.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Appiot.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--A页面跳转到B页面 再返回  实现进入时左进右出 返回时右进左出的效果-->
+    <style name="ActivityAnim">
+        <!--A页面跳转到B页面时 将要打开的B页面的动画 X from -1 to 0-->
+        <item name="android:activityOpenEnterAnimation">@anim/anim_right_in</item>
+        <!--A页面跳转到B页面时 将要退出的A页面的动画 X from 0 to 1-->
+        <item name="android:activityOpenExitAnimation">@anim/anim_left_out</item>
+        <!--B页面返回到A页面时 将要打开的A页面的动画 X from 1 to 0-->
+        <item name="android:activityCloseEnterAnimation">@anim/anim_left_in</item>
+        <!--B页面返回到A页面时 将要退出的B页面的动画 X from 0 to -1-->
+        <item name="android:activityCloseExitAnimation">@anim/anim_right_out</item>
+    </style>
+</resources>

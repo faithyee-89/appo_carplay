@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_main_bg"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_l"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cl_top_c"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_map"
+                android:layout_width="79dp"
+                android:layout_height="79dp"
+                android:src="@mipmap/ic_icon_map"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地图"
+                app:layout_constraintLeft_toLeftOf="@id/iv_map"
+                app:layout_constraintRight_toRightOf="@id/iv_map"
+                app:layout_constraintTop_toBottomOf="@id/iv_map" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/cl_top_l"
+            app:layout_constraintRight_toLeftOf="@id/cl_top_r"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/main_tab_bg"
+                app:layout_constraintBottom_toTopOf="@id/tv_meeting"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_meeting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="今天"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_meeting_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="9.5dp"
+                    android:text="上海车展周例会"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_meeting_title" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_marginRight="9.5dp"
+                    android:background="@drawable/main_dot_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_meeting_title1"
+                    app:layout_constraintRight_toLeftOf="@id/tv_meeting_title1"
+                    app:layout_constraintTop_toTopOf="@id/tv_meeting_title1" />
+
+                <TextView
+                    android:id="@+id/tv_meeting_sub_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="5dp"
+                    android:text="17:00-18:00"
+                    android:textColor="#999999"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_meeting_title1" />
+
+
+                <TextView
+                    android:id="@+id/tv_meeting_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:text="沉浸式氛围"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_meeting_sub_title1" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_marginRight="9.5dp"
+                    android:background="@drawable/main_dot_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_meeting_title2"
+                    app:layout_constraintRight_toLeftOf="@id/tv_meeting_title2"
+                    app:layout_constraintTop_toTopOf="@id/tv_meeting_title2" />
+
+                <TextView
+                    android:id="@+id/tv_meeting_sub_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="5dp"
+                    android:text="17:00-18:00"
+                    android:textColor="#999999"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_meeting_title2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_meeting"
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会议"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/cl_meeting"
+                app:layout_constraintRight_toRightOf="@id/cl_meeting"
+                app:layout_constraintTop_toBottomOf="@id/cl_meeting" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_r"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toRightOf="@id/cl_top_c"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_video"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/main_tab_bg"
+                app:layout_constraintBottom_toTopOf="@id/tv_video"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_video_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="12.5dp"
+                    android:text="猜你喜欢"
+                    android:textColor="#666666"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_video_title"
+                    banner:banner_indicator_normal_color="#fff"
+                    banner:banner_indicator_selected_color="#fff"
+                    banner:banner_radius="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_video"
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/cl_video"
+                app:layout_constraintRight_toRightOf="@id/cl_video"
+                app:layout_constraintTop_toBottomOf="@id/cl_video" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom_l"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cl_bottom_c"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_air"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/main_tab_bg"
+                app:layout_constraintBottom_toTopOf="@id/tv_air"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_aircondition_bg" />
+
+                <TextView
+                    android:id="@+id/tv_air_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12.5dp"
+                    android:text="我的车"
+                    android:textColor="#13ADFF"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="3dp"
+                    android:text="26°"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_wind"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="23dp"
+                    android:src="@mipmap/ic_wind"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:textColor="#666666"
+                    android:layout_marginLeft="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_wind"
+                    app:layout_constraintLeft_toRightOf="@id/iv_wind"
+                    app:layout_constraintTop_toTopOf="@id/iv_wind" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_air"
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空调"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/cl_air"
+                app:layout_constraintRight_toRightOf="@id/cl_air"
+                app:layout_constraintTop_toBottomOf="@id/cl_air" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toRightOf="@id/cl_bottom_l"
+            app:layout_constraintRight_toLeftOf="@id/cl_bottom_r"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_atmosphere"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/main_tab_bg"
+                app:layout_constraintBottom_toTopOf="@id/tv_atmosphere"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_atmosphere"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    banner:banner_indicator_normal_color="#fff"
+                    banner:banner_indicator_selected_color="#fff"
+                    banner:banner_radius="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_atmosphere"
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="氛围"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/cl_atmosphere"
+                app:layout_constraintRight_toRightOf="@id/cl_atmosphere"
+                app:layout_constraintTop_toBottomOf="@id/cl_atmosphere" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom_r"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/cl_bottom_c"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_travel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:paddingHorizontal="19dp"
+                android:background="@drawable/main_tab_bg"
+                app:layout_constraintBottom_toTopOf="@id/tv_travel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_travel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:text="为您找到"
+                    android:textColor="#666666"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#70F3FF"
+                    app:layout_constraintTop_toBottomOf="@id/tv_travel_title"
+                    app:layout_constraintBottom_toTopOf="@id/layout_2"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="3.5dp"
+                    android:layout_height="0dp">
+
+                    <ImageView
+                        android:src="@mipmap/ic_travel_1"
+                        android:scaleType="fitXY"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp" />
+
+                    <TextView
+                        android:text="梧桐山樱花"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFF143"
+                    app:layout_constraintTop_toBottomOf="@id/layout_1"
+                    app:layout_constraintBottom_toTopOf="@id/layout_3"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="3.5dp"
+                    android:layout_height="0dp">
+
+                    <ImageView
+                        android:src="@mipmap/ic_travel_2"
+                        android:scaleType="fitXY"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp" />
+
+                    <TextView
+                        android:text="大自然素食"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_3"
+                    android:background="#00E09E"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintTop_toBottomOf="@id/layout_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="3.5dp"
+                    android:layout_height="0dp">
+
+                    <ImageView
+                        android:src="@mipmap/ic_travel_3"
+                        android:scaleType="fitXY"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp" />
+
+                    <TextView
+                        android:text="桐林庭院客栈"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_travel"
+                style="@style/main_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出行助手"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/cl_travel"
+                app:layout_constraintRight_toRightOf="@id/cl_travel"
+                app:layout_constraintTop_toBottomOf="@id/cl_travel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

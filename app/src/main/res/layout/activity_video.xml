@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_video_bg">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="18dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="29"
+        banner:banner_indicator_normal_color="#80FFFFFF"
+        banner:banner_indicator_selected_color="#FFFFFF"
+        banner:banner_radius="5dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_video"
+        app:layout_constraintVertical_weight="25">
+
+        <TextView
+            android:id="@+id/tv_bottom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="热播推荐"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/ll_item_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="33dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ll_item_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_bottom_title">
+
+            <ImageView
+                android:id="@+id/iv_item1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18.5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_main_video_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11.5dp"
+                android:text="上元之夜故宫换“新装”"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_share_1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:padding="7dp"
+                android:src="@mipmap/ic_share" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_item_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="33dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ll_item_1"
+            app:layout_constraintRight_toLeftOf="@id/ll_item_3"
+            app:layout_constraintTop_toBottomOf="@id/tv_bottom_title">
+
+            <ImageView
+                android:id="@+id/iv_item2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18.5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_main_video_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11.5dp"
+                android:text="2019年央视春晚-深圳分会场"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_share_2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:padding="7dp"
+                android:src="@mipmap/ic_share" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_item_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="33dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ll_item_2"
+            app:layout_constraintRight_toLeftOf="@id/ll_item_4"
+            app:layout_constraintTop_toBottomOf="@id/tv_bottom_title">
+
+            <ImageView
+                android:id="@+id/iv_item3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18.5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_main_video_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11.5dp"
+                android:text="FABULUS柔性菲涅尔屏系列"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_share_3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:padding="7dp"
+                android:src="@mipmap/ic_share" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_item_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginBottom="33dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ll_item_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bottom_title">
+
+            <ImageView
+                android:id="@+id/iv_item4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18.5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_main_video_4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11.5dp"
+                android:text="北京首钢激光投影秀项目"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_share_4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:padding="7dp"
+                android:src="@mipmap/ic_share" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginVertical="14dp"
+            android:layout_marginLeft="26dp"
+            android:src="@mipmap/ic_arrow_white_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="视频"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_arrow"
+            app:layout_constraintLeft_toRightOf="@id/iv_arrow"
+            app:layout_constraintTop_toTopOf="@id/iv_arrow" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_share"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="32dp"
+            android:src="@mipmap/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
