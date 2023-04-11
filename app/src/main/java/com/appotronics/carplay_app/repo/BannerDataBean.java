@@ -38,9 +38,8 @@ public class BannerDataBean {
         List<BannerDataBean> list = new ArrayList<>();
         list.add(new BannerDataBean(R.mipmap.ic_main_video_1, "沸雪首钢光影秀", 3));
         list.add(new BannerDataBean(R.mipmap.ic_main_video_2, "故宫上元之夜", 3));
-        list.add(new BannerDataBean(R.mipmap.ic_main_video_3, "未来城市", 3));
-        list.add(new BannerDataBean(R.mipmap.ic_main_video_4, "产品视频", 3));
-        list.add(new BannerDataBean(R.mipmap.ic_main_video_5, "柔性菲涅尔屏", 3));
+        list.add(new BannerDataBean(R.mipmap.ic_main_video_3, "产品视频", 3));
+        list.add(new BannerDataBean(R.mipmap.ic_main_video_4, "光峰品牌宣传片", 3));
         return list;
     }
 

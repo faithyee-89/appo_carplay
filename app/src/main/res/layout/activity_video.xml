@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="11.5dp"
-                android:text="上元之夜故宫换“新装”"
+                android:text="沸雪首钢光影秀"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="11.5dp"
-                android:text="2019年央视春晚-深圳分会场"
+                android:text="故宫上元之夜"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="11.5dp"
-                android:text="FABULUS柔性菲涅尔屏系列"
+                android:text="产品视频"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
@@ -196,7 +196,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="11.5dp"
-                android:text="北京首钢激光投影秀项目"
+                android:text="光峰品牌宣传片"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 

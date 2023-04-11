@@ -78,7 +78,7 @@ class VideoActivity : BaseActivity<ActivityVideoBinding>() {
         }
 
         binding.llItem1.setOnClickListener {
-            startVideoAct("未来城市.mp4")
+            startVideoAct("沸雪首钢光影秀.mp4")
         }
 
         binding.llItem2.setOnClickListener {
@@ -86,15 +86,15 @@ class VideoActivity : BaseActivity<ActivityVideoBinding>() {
         }
 
         binding.llItem3.setOnClickListener {
-            startVideoAct("沸雪首钢光影秀.mp4")
-        }
-
-        binding.llItem4.setOnClickListener {
             startVideoAct("产品视频.mp4")
         }
 
+        binding.llItem4.setOnClickListener {
+            startVideoAct("光峰品牌宣传片.mp4")
+        }
+
         binding.ivShare1.setOnClickListener {
-            shareVideo("未来城市")
+            shareVideo("沸雪首钢光影秀")
         }
 
         binding.ivShare2.setOnClickListener {
@@ -102,11 +102,11 @@ class VideoActivity : BaseActivity<ActivityVideoBinding>() {
         }
 
         binding.ivShare3.setOnClickListener {
-            shareVideo("沸雪首钢光影秀")
+            shareVideo("产品视频")
         }
 
         binding.ivShare4.setOnClickListener {
-            shareVideo("产品视频")
+            shareVideo("光峰品牌宣传片")
         }
     }
 

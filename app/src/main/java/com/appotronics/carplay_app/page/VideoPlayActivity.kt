@@ -4,6 +4,7 @@ import android.os.Environment
 import android.widget.MediaController
 import com.appotronics.carplay_app.base.BaseActivity
 import com.appotronics.carplay_app.databinding.ActivityVideoPlayBinding
+import com.appotronics.carplay_app.utils.MqttLogUtils
 import com.youth.banner.util.LogUtils
 import java.io.File
 
@@ -37,9 +38,9 @@ class VideoPlayActivity : BaseActivity<ActivityVideoPlayBinding>() {
 //        val uri = "android.resource://" + getPackageName() + "/" + R.raw.play_1
         val videoSdPath =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        LogUtils.i("videoSdPath = " + videoSdPath)
+        MqttLogUtils.i("videoSdPath = " + videoSdPath)
         val file = File(videoSdPath, "/$videoName")
-
+        MqttLogUtils.i("videoSdPath2 = " + file.absolutePath)
 //        videoView.setVideoURI(Uri.parse(uri))
         videoView.setVideoPath(file.absolutePath)
         mediaController.setMediaPlayer(videoView)

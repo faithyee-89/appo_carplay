@@ -23,6 +23,12 @@ class ShareDialog(fragmentManager: FragmentManager) : BaseDialogFragment<Fragmen
     }
 
     override fun init() {
+        dialog?.window?.setBackgroundDrawable(resources.getDrawable(R.color.transparent))
+        val window = dialog?.window
+        val attributes = window?.attributes
+        attributes?.dimAmount = 0.0f
+        window?.attributes = attributes
+
         binding.clWindow.setOnClickListener {
             changeRadio(1)
             selectItem = 1

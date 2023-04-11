@@ -1,18 +1,10 @@
 package com.appotronics.carplay_app.base
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
-import com.alibaba.fastjson.JSONObject
-import com.appotronics.appo_lib.AppoSDK
-import com.appotronics.appo_lib.callback.AppoResponseCallback
-import com.appotronics.appo_lib.engine.MqttLogUtils
-import com.appotronics.carplay_app.bean.RequestBean
-import com.appotronics.carplay_app.page.PicShowActivity
-import com.appotronics.carplay_app.page.VideoPlayActivity
 import com.appotronics.carplay_app.utils.BarUtils
 import java.lang.reflect.ParameterizedType
 

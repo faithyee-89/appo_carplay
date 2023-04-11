@@ -19,6 +19,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/iv_show"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_show_default"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_top_l"
             android:layout_width="0dp"
@@ -178,12 +186,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_video"
-                android:clickable="true"
-                android:focusable="true"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/main_tab_bg"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintBottom_toTopOf="@id/tv_video"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -309,10 +317,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2"
-                    android:textSize="18sp"
-                    android:textColor="#666666"
                     android:layout_marginLeft="2dp"
+                    android:text="2"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@id/iv_wind"
                     app:layout_constraintLeft_toRightOf="@id/iv_wind"
                     app:layout_constraintTop_toTopOf="@id/iv_wind" />
@@ -397,111 +405,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="7dp"
-                android:paddingHorizontal="19dp"
                 android:background="@drawable/main_tab_bg"
+                android:paddingHorizontal="19dp"
                 app:layout_constraintBottom_toTopOf="@id/tv_travel"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/tv_travel_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="13dp"
-                    android:text="为您找到"
-                    android:textColor="#666666"
-                    android:textSize="17sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:layout_width="29.5dp"
+                    android:layout_height="37.5dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@mipmap/ic_animal"
+                    app:layout_constraintBottom_toTopOf="@id/cl_orange"
+                    app:layout_constraintLeft_toLeftOf="parent" />
 
-                <LinearLayout
-                    android:id="@+id/layout_1"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="#70F3FF"
-                    app:layout_constraintTop_toBottomOf="@id/tv_travel_title"
-                    app:layout_constraintBottom_toTopOf="@id/layout_2"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_orange"
                     android:layout_width="match_parent"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="4dp"
-                    android:paddingVertical="3.5dp"
-                    android:layout_height="0dp">
-
-                    <ImageView
-                        android:src="@mipmap/ic_travel_1"
-                        android:scaleType="fitXY"
-                        android:layout_width="37dp"
-                        android:layout_height="37dp" />
+                    android:layout_height="46.3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:background="@mipmap/ic_travel_orange"
+                    app:layout_constraintBottom_toTopOf="@id/cl_green"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
 
                     <TextView
-                        android:text="梧桐山樱花"
-                        android:textColor="#000000"
-                        android:textSize="17sp"
-                        android:layout_marginLeft="6dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="有你喜欢的餐厅哦"
+                        android:textColor="#222222"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/layout_2"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="5dp"
-                    android:background="#FFF143"
-                    app:layout_constraintTop_toBottomOf="@id/layout_1"
-                    app:layout_constraintBottom_toTopOf="@id/layout_3"
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_green"
                     android:layout_width="match_parent"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="4dp"
-                    android:paddingVertical="3.5dp"
-                    android:layout_height="0dp">
-
-                    <ImageView
-                        android:src="@mipmap/ic_travel_2"
-                        android:scaleType="fitXY"
-                        android:layout_width="37dp"
-                        android:layout_height="37dp" />
-
-                    <TextView
-                        android:text="大自然素食"
-                        android:textColor="#000000"
-                        android:textSize="17sp"
-                        android:layout_marginLeft="6dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/layout_3"
-                    android:background="#00E09E"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="18dp"
-                    app:layout_constraintTop_toBottomOf="@id/layout_2"
+                    android:layout_height="46.3dp"
+                    android:background="@mipmap/ic_travel_green"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_width="match_parent"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="4dp"
-                    android:paddingVertical="3.5dp"
-                    android:layout_height="0dp">
-
-                    <ImageView
-                        android:src="@mipmap/ic_travel_3"
-                        android:scaleType="fitXY"
-                        android:layout_width="37dp"
-                        android:layout_height="37dp" />
+                    app:layout_constraintTop_toBottomOf="@id/cl_orange">
 
                     <TextView
-                        android:text="桐林庭院客栈"
-                        android:textColor="#000000"
-                        android:textSize="17sp"
-                        android:layout_marginLeft="6dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="目的地停车位紧张"
+                        android:textColor="#222222"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
