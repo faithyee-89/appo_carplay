@@ -14,7 +14,10 @@ import com.appotronics.carplay_app.adapter.ImageBottomTitleAdapter
 import com.appotronics.carplay_app.base.BaseActivity
 import com.appotronics.carplay_app.bean.RequestBean
 import com.appotronics.carplay_app.databinding.ActivityMainBinding
+import com.appotronics.carplay_app.dialog.PicShowDialog
+import com.appotronics.carplay_app.dialog.ShareDialog
 import com.appotronics.carplay_app.repo.BannerDataBean
+import com.appotronics.carplay_app.utils.ClickUtils
 import com.permissionx.guolindev.PermissionX
 import com.youth.banner.util.LogUtils
 
@@ -27,8 +30,10 @@ import com.youth.banner.util.LogUtils
  */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var isShow = false
+    lateinit var picShowDialog: PicShowDialog
 
     override fun init() {
+        picShowDialog = PicShowDialog(supportFragmentManager)
         PermissionX.init(this).permissions(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE
@@ -42,6 +47,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.clTravel.setOnClickListener {
             startActivity(Intent(this, TravelActivity::class.java))
         }
+
+        ClickUtils.applySingleDebouncing(binding.clOrange, View.OnClickListener {
+            picShowDialog.show(R.mipmap.ic_1_4)
+        })
+
+        ClickUtils.applySingleDebouncing(binding.clGreen, View.OnClickListener {
+            picShowDialog.show(R.mipmap.ic_4_1)
+        })
 
         binding.ivShow.setOnClickListener {
             if (!isShow) {
