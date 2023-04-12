@@ -87,19 +87,21 @@ class TravelActivity : BaseActivity<ActivityTravelBinding>() {
             type = "2"
         })
         shareDialog.show(toJSONString, object : ShareDialog.OnItemClickListener {
-            override fun onItemClick(viewId: Int, json: String, gsn: String) {
-                AppoSDK.appoRequest(
-                    json,
-                    gsn,
-                    object : AppoRequestCallback {
-                        override fun onFail() {
+            override fun onItemClick(viewId: Int, json: String, selectGsnList: MutableList<String>?) {
+                selectGsnList?.forEach { gsn ->
+                    AppoSDK.appoRequest(
+                        json,
+                        gsn,
+                        object : AppoRequestCallback {
+                            override fun onFail() {
 
-                        }
+                            }
 
-                        override fun onSuccess() {
-                            MyPadToastUtils.showShortToast("分享成功")
-                        }
-                    })
+                            override fun onSuccess() {
+                                MyPadToastUtils.showShortToast("分享成功")
+                            }
+                        })
+                }
             }
         })
     }

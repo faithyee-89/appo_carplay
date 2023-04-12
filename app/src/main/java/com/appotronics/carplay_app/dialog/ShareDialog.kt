@@ -15,11 +15,15 @@ class ShareDialog(fragmentManager: FragmentManager) : BaseDialogFragment<Fragmen
     private var selectItem: Int
     private var listener: OnItemClickListener? = null
     private var json = ""
-    private var selectGsn = ""
+    private var selectGsnList: MutableList<String>? = null
+    private var selectA = false
+    private var selectFront = false
+
 
     init {
         this.fragmentManager = fragmentManager
         this.selectItem = 0
+        selectGsnList = mutableListOf()
     }
 
     override fun init() {
@@ -29,36 +33,36 @@ class ShareDialog(fragmentManager: FragmentManager) : BaseDialogFragment<Fragmen
         attributes?.dimAmount = 0.0f
         window?.attributes = attributes
 
-        binding.clWindow.setOnClickListener {
-            changeRadio(1)
-            selectItem = 1
-            selectGsn = "9c2f153d-7837-4e29-9b7a-5a2a2e7cc1fe"
+        binding.clWindow.setOnClickListener { //前车
+            //"a56cae0f-3ca5-42ab-8b85-e191a86c038c" //APPO-000004
+            val shareGsn = "07dc7ae9-8189-4fca-9ba1-d998a7705ef7" //方兵
+            if (!selectFront) {
+                selectGsnList?.add(shareGsn)
+                binding.ivCarFront.setImageDrawable(resources.getDrawable(R.mipmap.ic_share_car_circle_select))
+            } else {
+                selectGsnList?.remove(shareGsn)
+                binding.ivCarFront.setImageDrawable(resources.getDrawable(R.mipmap.ic_share_car_circle))
+            }
+
+            selectFront = !selectFront
+
         }
 
-        binding.clCar.setOnClickListener {
-            changeRadio(2)
-            selectItem = 2
-//            selectGsn = "a56cae0f-3ca5-42ab-8b85-e191a86c038c" //APPO-000004
-            selectGsn = "07dc7ae9-8189-4fca-9ba1-d998a7705ef7" //方兵
+        binding.clCar.setOnClickListener {  //A车
+            val shareGsn = "9c2f153d-7837-4e29-9b7a-5a2a2e7cc1fe"
+            if (!selectA) {
+                selectGsnList?.add(shareGsn)
+                binding.ivCarA.setImageDrawable(resources.getDrawable(R.mipmap.ic_share_car_circle_select))
+            } else {
+                selectGsnList?.remove(shareGsn)
+                binding.ivCarA.setImageDrawable(resources.getDrawable(R.mipmap.ic_share_car_circle))
+            }
+            selectA = !selectA
         }
 
         binding.rlSure.setOnClickListener {
-            listener?.onItemClick(it.id, this.json, selectGsn)
+            listener?.onItemClick(it.id, this.json, selectGsnList)
             dismiss()
-        }
-
-    }
-
-    fun changeRadio(cursor: Int) {
-        when (cursor) {
-            1 -> {
-                binding.rbWindow.background = resources.getDrawable(R.mipmap.ic_checkbox_check)
-                binding.rbCar.background = resources.getDrawable(R.mipmap.ic_checkbox_uncheck)
-            }
-            2 -> {
-                binding.rbWindow.background = resources.getDrawable(R.mipmap.ic_checkbox_uncheck)
-                binding.rbCar.background = resources.getDrawable(R.mipmap.ic_checkbox_check)
-            }
         }
 
     }
@@ -74,7 +78,7 @@ class ShareDialog(fragmentManager: FragmentManager) : BaseDialogFragment<Fragmen
     }
 
     interface OnItemClickListener {
-        fun onItemClick(viewId: Int, json: String, gsn: String)
+        fun onItemClick(viewId: Int, json: String, selectGsnList: MutableList<String>?)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
