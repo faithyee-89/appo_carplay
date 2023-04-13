@@ -45,15 +45,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
 
         binding.clTravel.setOnClickListener {
-            startActivity(Intent(this, TravelActivity::class.java))
+//            startActivity(Intent(this, TravelActivity::class.java))
         }
 
         ClickUtils.applySingleDebouncing(binding.clOrange, View.OnClickListener {
-            picShowDialog.show(R.mipmap.ic_1_4)
+            picShowDialog.show(R.mipmap.ic_1_1)
         })
 
         ClickUtils.applySingleDebouncing(binding.clGreen, View.OnClickListener {
-            picShowDialog.show(R.mipmap.ic_4_1)
+            picShowDialog.show(R.mipmap.ic_1_1)
         })
 
         binding.ivShow.setOnClickListener {
@@ -102,7 +102,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
                     "2" -> {
                         //图片
-                        startPicAct("ic_${parseObject.contentName}")
+//                        startPicAct("ic_${parseObject.contentName}")
+                        picShowDialog.show(R.mipmap.ic_1_1)
                     }
                 }
             }

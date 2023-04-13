@@ -76,6 +76,7 @@
                 android:textSize="12sp" />
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/iv_share_1"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -118,6 +119,7 @@
                 android:textSize="12sp" />
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/iv_share_2"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -160,6 +162,7 @@
                 android:textSize="12sp" />
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/iv_share_3"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -201,6 +204,7 @@
                 android:textSize="12sp" />
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/iv_share_4"
                 android:layout_width="32dp"
                 android:layout_height="32dp"

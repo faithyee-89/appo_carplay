@@ -12,5 +12,8 @@ import com.appotronics.carplay_app.databinding.ActivityMapBinding
  */
 class MapActivity : BaseActivity<ActivityMapBinding>() {
     override fun init() {
+        binding.vBack.setOnClickListener {
+            finish()
+        }
     }
 }

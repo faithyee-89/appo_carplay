@@ -8,4 +8,12 @@
     android:paddingHorizontal="30dp"
     android:paddingVertical="30dp">
 
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/v_back"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,8 @@ class MyApplication : Application() {
         MyPadToastUtils.setContext(this)
 //        9c2f153d-7837-4e29-9b7a-5a2a2e7cc1f1 APPO-000002
 //        6d7efc40-a992-46c9-a41f-e29ca3b83ebe APPO-000005
-        AppoSDK.init(this, "admin", "public", "APPO-000005", "", object : AuthResponseCallback {
+        //侧车窗演示的sn：APPO-000011  c6651017-c7ca-465b-90f2-2a00666df258
+        AppoSDK.init(this, "admin", "public", "APPO-000011", "", object : AuthResponseCallback {
             override fun authRes(result: AuthResult, message: MessageResult, gsn: String) {
                 when (result) {
                     AuthResult.AuthSuccess -> {

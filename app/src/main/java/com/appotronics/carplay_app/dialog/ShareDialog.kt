@@ -35,7 +35,7 @@ class ShareDialog(fragmentManager: FragmentManager) : BaseDialogFragment<Fragmen
 
         binding.clWindow.setOnClickListener { //前车
             //"a56cae0f-3ca5-42ab-8b85-e191a86c038c" //APPO-000004
-            val shareGsn = "07dc7ae9-8189-4fca-9ba1-d998a7705ef7" //方兵
+            val shareGsn = "35256911-5d8e-45f0-9521-182e79c1830c" //方兵
             if (!selectFront) {
                 selectGsnList?.add(shareGsn)
                 binding.ivCarFront.setImageDrawable(resources.getDrawable(R.mipmap.ic_share_car_circle_select))
